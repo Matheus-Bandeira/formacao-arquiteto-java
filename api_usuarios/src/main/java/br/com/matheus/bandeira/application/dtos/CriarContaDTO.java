@@ -23,8 +23,9 @@ public class CriarContaDTO {
     private String email;
 
 
-    @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\\\d)(?=.*[@$!%*?&])[A-Za-z\\\\d@$!%*?&]{8,}$",
-    message = "A senha deve ter pelo menos 8 caracteres, uma letra maiúscula, uma letra minúscula, um número e um caractere especial")
+  /*  @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\\\d)(?=.*[@$!%*?&])[A-Za-z\\\\d@$!%*?&]{8,}$",
+    message = "A senha deve ter pelo menos 8 caracteres, uma letra maiúscula, uma letra minúscula, um número e um caractere especial")*/
+    @Size(min = 8, max = 20, message = "Senha do cliente de ser de 8 a 20 caracteres")
     @NotBlank(message = "Senha do usuário é obrigatória.")
     private String senha;
 }

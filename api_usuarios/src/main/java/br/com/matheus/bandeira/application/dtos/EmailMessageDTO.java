@@ -6,11 +6,11 @@ import lombok.*;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 @EqualsAndHashCode
-public class CriarContaResponseDTO {
+public class EmailMessageDTO {
 
-    private String mensagem;
-    private String _id;
-    private String nome;
-    private String email;
+    private String to;
+    private String subject;
+    private String body;
 }
